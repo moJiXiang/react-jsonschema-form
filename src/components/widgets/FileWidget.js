@@ -28,23 +28,25 @@ function processFiles(files) {
   return Promise.all([].map.call(files, processFile));
 }
 
-function FilesInfo(props) {
-  const { filesInfo } = props;
-  if (filesInfo.length === 0) {
-    return null;
+class FilesInfo extends Component {
+  render() {
+    const { filesInfo } = this.props;
+    if (filesInfo.length === 0) {
+      return null;
+    }
+    return (
+      <ul className="file-info">
+        {filesInfo.map((fileInfo, key) => {
+          const { name, size, type } = fileInfo;
+          return (
+            <li key={key}>
+              <strong>{name}</strong> ({type}, {size} bytes)
+            </li>
+          );
+        })}
+      </ul>
+    );
   }
-  return (
-    <ul className="file-info">
-      {filesInfo.map((fileInfo, key) => {
-        const { name, size, type } = fileInfo;
-        return (
-          <li key={key}>
-            <strong>{name}</strong> ({type}, {size} bytes)
-          </li>
-        );
-      })}
-    </ul>
-  );
 }
 
 function extractFileInfo(dataURLs) {

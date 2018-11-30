@@ -1,6 +1,6 @@
 {
-  "name": "react-jsonschema-form",
-  "version": "1.0.5",
+  "name": "opsmind-react-jsonschema-form",
+  "version": "1.0.7",
   "description": "A simple React component capable of building HTML forms out of a JSON schema.",
   "scripts": {
     "build:readme": "toctoc README.md -w",
@@ -104,7 +104,7 @@
     "type": "git",
     "url": "git+https://github.com/mozilla-services/react-jsonschema-form.git"
   },
-  "author": "Nicolas Perriault <nperriault@mozilla.com>",
+  "author": "moJiXiang <mojixiang1102@gmail.com>",
   "keywords": [
     "react",
     "form",
